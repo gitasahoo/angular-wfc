@@ -1,0 +1,44 @@
+<div class="container-fluid  h-100">
+<div class="row  h-30 titlebg ">
+       <div class="col-xs-9 col-lg-9  h-100" >
+		<h2> Contact Us </h2>
+		<p>
+		Contact us for anything related to our services.
+ 		We will get back to you soon.
+		</p>
+	</div>
+	 <div class="col-xs-3 col-lg-3 h-100">
+		<ul>
+		<li class="nav-item">
+ 		<a class="nav-link" [routerLink]="[{outlets:{contactdetail:'contacttype/sendemail'}}]" routerLinkActive="active">Send an Email </a>
+		</li>
+		<li class="nav-item">
+ 		<a class="nav-link" [routerLink]="[{outlets:{contactdetail:'contacttype/askquestion'}}]" routerLinkActive="active">Ask a question</a>
+		</li>
+		<li class="nav-item">
+ 		<a class="nav-link" [routerLink]="[{outlets:{contactdetail:'contacttype/callus'}}]" routerLinkActive="active">Call Us</a>
+		</li>
+		</ul>
+	</div>
+</div>
+<div class="row  h-70  ">
+		<router-outlet name="contactdetail"></router-outlet>
+</div>
+</div>
+
+
+
+
+
+<!-- below not working
+        <div class="row   justify-content-center align-self-center h-100  ">
+[{outlets: {primary: path, sidemenu:path}}], {relativeTo: this.route}
+ <a class="nav-link" routerLink="['/contactus',{outlets: {contactsubmenu:':sendemail'}}]" routerLinkActive="active">Send an Email</a>
+ <a class="nav-link" routerLink="['contactus',{outlets: {contactsubmenu:':sendemail'}}]" routerLinkActive="active">Send an Email</a>
+ <a class="nav-link" [routerLink]="['/contactus/sendemail']" routerLinkActive="active">Send an Email dot slash with barcket</a>
+ <a class="nav-link" [routerLink]="[{outlets:{sm:'./sendemail'}}]" routerLinkActive="active">Send an Email outlet</a>
+ below child path working when the child is not associated with named outlet
+ <a class="nav-link" routerLink="./sendemail" routerLinkActive="active">Send an Email dot slash</a>
+ below child path working when no param is beign passed
+ 		<a class="nav-link" [routerLink]="[{outlets:{contactdetail:'contacttype'}}]" routerLinkActive="active">Send an Email </a>
+-->

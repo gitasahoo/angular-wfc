@@ -1,0 +1,49 @@
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+ <a class="navbar-brand" href="#">
+    <img src="/assets/img/brand.jpg" width="30" height="30" class="d-inline-block align-top" alt="L">
+   LiftOthers
+  </a>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item ">
+        <a class="nav-link" routerLink="home" routerLinkActive="active">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="contactus" routerLinkActive="active">Contact Us</a>
+      </li>
+	<li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownServicesLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         Services
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownServicesLink">
+          <a class="dropdown-item" href="#">Adopt a Grandparent</a>
+          <a class="dropdown-item" href="#">Sponsor a Child</a>
+          <a class="dropdown-item" href="#">Helping a Homeless</a>
+          <a class="dropdown-item" href="#">Donate Blood</a>
+          <a class="dropdown-item" href="#">Be a Scribe</a>
+        </div>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Registration</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

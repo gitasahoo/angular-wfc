@@ -1,0 +1,41 @@
+import { ModuleWithProviders } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import {ContactusComponent } from './contactus.component';
+import { ContactsubmenuComponent } from '../contactsubmenu/contactsubmenu.component';
+
+const contactusRoutes: Routes = [
+{
+        path: 'contactus',
+        component: ContactusComponent
+        children: [
+        {       
+                path: '',
+                component: ContactusComponent,
+},
+        {
+                path: 'sendemail',
+                component: ContactsubmenuComponent,
+                outlet: 'contactsubmenu'
+        }
+        ]
+}
+/*
+,
+  {
+    path: 'about',
+    component: AboutSectionComponent,
+    children: [
+      {
+        path: '',
+        component: AboutComponent
+      },
+      {
+        path: ':username',
+        component: AboutUserComponent
+      }
+    ]
+  }
+*/
+];
+
+export const ContactusRouting: ModuleWithProviders = RouterModule.forChild(contactusRoutes);
